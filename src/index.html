@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Backcountry Slope Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrapmap.css">
+    <style type="text/css">
+      #mapDiv {
+        min-height: 100px;
+        max-height: 1000px;
+      }
+    </style>
+
+    <!-- HTML5 IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+      <script src="../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- Bootstrap-map-js -->
+    <div class="container">
+      <div class="col-xs-12 col-sm-12 col-lg-12 bg-none">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-lg-12">
+            <h5>Top 12</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-lg-9 no-col-padding">
+            <!-- Bootstrap-map-js -->
+            <div id="mapDiv"></div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-lg-3">
+            <h5>Right 3</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4"><h5>Bottom 4</h5></div>
+          <div class="col-xs-4"><h5>Bottom 4</h5></div>
+          <div class="col-xs-4"><h5>Bottom 4</h5></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- config dojo loader -->
+    <script>
+      (function(){
+        var path = location.pathname.replace(/\/[^/]+$/, '/');
+        window.dojoConfig = {
+          parseOnLoad: false,
+          async: true,
+          packages: [
+            {
+              name: "app",
+              location: path + 'app'
+            }/*,
+            {
+              name: "modeler",
+              location: path + 'lib/weighted-overlay-modeler'
+            }*/
+          ]
+        };
+      }());
+    </script>
+    <!-- esri JS API -->
+    <script src="http://js.arcgis.com/3.7compact"></script>
+    <!-- app starting point -->
+    <script src="./js/main.js"></script>
+    <!-- jQuery (for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- bootstrap: include all  plugins or individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
