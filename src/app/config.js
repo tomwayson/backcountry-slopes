@@ -10,6 +10,7 @@ define([], function() {
 
     // web map item id
     // leave empty for a blank map
-    webMapId: 'a6bc7c1d30d243319833554c6fc04cd6'
+    // webMapId: 'a6bc7c1d30d243319833554c6fc04cd6'
+    webMapId: 'f47b081abf8f4518a03fe8223f049562'
   };
 });
